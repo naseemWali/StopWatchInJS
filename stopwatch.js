@@ -73,44 +73,134 @@
 // let restart=document.getElementById("restart")
 // console.log(restart);
 
-let time=document.getElementById("time")
-console.log(time);
 
-let [sec,min,hour]=[0,0,0]
-let timer=null;
+// making a stopwatch
+
+// let time=document.getElementById("time")
+// console.log(time);
+
+// let [sec,min,hour]=[0,0,0]
+// let timer=null;
 
 
-function timing() {
-    sec++;
-    if (sec==60) {
-        sec=0;
-        min++        
-    }
-    if (min==60) {
-        min=0;
-        hour++;
-    }
-    let seconds=sec<10 ? "0" + sec : sec;
-    let minutes=min<10 ? "0" + min : min;
-    let hourses=hour<10 ? "0" + hour : hour
+// function timing() {
+//     sec++;
+//     if (sec==60) {
+//         sec=0;
+//         min++        
+//     }
+//     if (min==60) {
+//         min=0;
+//         hour++;
+//     }
+//     let seconds=sec<10 ? "0" + sec : sec;
+//     let minutes=min<10 ? "0" + min : min;
+//     let hourses=hour<10 ? "0" + hour : hour
     
-    time.innerHTML=hourses + ":" + minutes + ":" + seconds
-   }
+//     time.innerHTML=hourses + ":" + minutes + ":" + seconds
+//    }
 
-function start() {
-   if (timer!==null) {
-    clearInterval(timer)
-   }
+// function start() {
+//    if (timer!==null) {
+//     clearInterval(timer)
+//    }
 
-    timer=setInterval(timing,1000)
+//     timer=setInterval(timing,1000)
 
-}
+// }
 
-function stop() {
-    clearInterval(timer)
-}
-function restart() {
-    clearInterval(timer);
-    [sec,min,hour]=[0,0,0]
-    time.innerHTML="00::00::00"
-}
+// function stop() {
+//     clearInterval(timer)
+// }
+// function restart() {
+//     clearInterval(timer);
+//     [sec,min,hour]=[0,0,0]
+//     time.innerHTML="00:00:00"
+// }
+
+
+//  understanding of HOF and  callback fxns
+
+// function add(a,b,c,d) {
+//     let result=a+b+c;
+//     d(result);
+    
+// }
+// add(20,50,60,val=>{ console.log(val)})
+
+// Best examples of HOF and callback fxns
+
+// function naseem(a,b,c,nano) {
+//     let result=a+b+c;
+//     nano(result);
+
+//     return function returny() {
+//         console.log(result);
+        
+//     }  
+    
+// }
+
+// function hello(res) {
+// console.log(res);
+    
+// }
+// let response=naseem(20,30,10,hello)
+// response()
+
+// another examples of callback fx 
+// const array=['mommy','sevy','lily','jess']
+
+// function hello(a,b,c,d) {
+//     console.log(a+b+c+d);
+    
+// }
+
+// setTimeout(() => {
+//     hello(array)
+// }, 4000);
+
+// it will say undefined 4 times with ansewrs because in hello argument it expects  single arguments
+//  solution 1
+
+// setTimeout(() => {
+//     hello(...array)
+// }, 4000);
+
+// solution2 using spread operators ...
+// spread operators 
+
+// function hello(arr) {
+//     console.log(arr.join(" "));
+    
+// }
+
+
+// setTimeout(() => {
+//     hello(array)
+// }, 4000);
+
+
+// using forEach loop
+const array=['mommy','sevy','lily','jess']
+
+
+// array.forEach(arr => {
+//     console.log(arr);
+    
+// });
+
+
+// using callback fxn
+
+// const arrow=(arr,cbi) =>{
+//     for (let index = 0; index < arr.length; index++) {
+//         const element = array[index];
+//         cbi(element)
+//     }
+// }
+
+// arrow(array,function lily(val) {
+//     console.log(val,'hey');
+    
+// })
