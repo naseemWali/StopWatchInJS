@@ -64,14 +64,14 @@
 
 
 
-// let stop=document.getElementById('stop')
-// console.log(stop);
+let stop=document.getElementById('stop')
+console.log(stop);
 
-// let play=document.getElementById("play")
-// console.log(play);
+let play=document.getElementById("play")
+console.log(play);
 
-// let restart=document.getElementById("restart")
-// console.log(restart);
+let restart=document.getElementById("restart")
+console.log(restart);
 
 
 // making a stopwatch
@@ -182,7 +182,7 @@
 
 
 // using forEach loop
-const array=['mommy','sevy','lily','jess']
+// const array=['mommy','sevy','lily','jess']
 
 
 // array.forEach(arr => {
@@ -204,3 +204,4 @@ const array=['mommy','sevy','lily','jess']
 //     console.log(val,'hey');
     
 // })
+
